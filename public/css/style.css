@@ -1,0 +1,257 @@
+body {
+	background-attachment: fixed;
+	background-image: url(/img/TheBox_Table.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	margin: 0;
+	background-color: #fff;
+	font-family: "hs-bold", FZLiBian, monospace, sans-serif;
+}
+.hs-decklist:hover {
+	cursor: url(/img/EyeOpen.png), auto;
+}
+.section-decklist:active, .hs-decklist:active {
+	cursor: url(/img/EyeClosed.png), auto;
+}
+.section-decklist {
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	cursor: url(/img/EyeHalf.png), auto;
+	display: flex;
+}
+.hs-decklist-container {
+	margin: auto;
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	justify-content: center;
+	color: #fff;
+}
+.hs-decklist-hero {
+	position: relative;
+	margin-right: 10px;
+	margin-bottom: 5px;
+}
+.hs-decklist-hero-frame {
+	height: 101px;
+	width: 256px;
+	overflow: hidden;
+	box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
+}
+.hero-frame {
+	position: absolute;
+}
+.hero-image {
+	display: block;
+	width: 100%;
+	margin: -13px 0 0 0;
+}
+.hs-decklist-title {
+	position: absolute;
+	bottom: 20px;
+	left: 29px;
+	width: 191px;
+}
+input {
+	padding: 0;
+	width: 100%;
+	font-family: "hs-bold", FZLiBian, monospace, sans-serif;
+	font-weight: bold;
+	color: #fff;
+	font-size: 1.5em;
+	border: none;
+	background: none;
+}
+input:focus {
+	outline: none;
+}
+input:invalid {
+	box-shadow: none;
+}
+.hs-arcane-dust {
+	position: absolute;
+	display: flex;
+	margin-top: 10px;
+}
+.hs-arcane-dust img, .hs-arcane-dust span {
+	font-size: 2em;
+	height: 1em;
+	line-height: 1;
+}
+.hs-golden {
+	color: #e5b544;
+}
+.hs-decklist {
+	padding: 0px;
+	margin: 0px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 1px 6px;
+}
+.deck-entry {
+	display: block;
+	height: 39px;
+	width: 239px;
+	position: relative;
+	margin: 1px;
+	padding-right: 6px;
+}
+.hs-tile-img {
+	position: absolute;
+	top: 7px;
+}
+.hs-tile-img img {
+	position: absolute;
+	height: 26px;
+}
+.hs-tile-shade {
+	background-image: url(/img/tile_shade.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	width: 165px;
+	height: 28px;
+	position: absolute;
+	top: 6px;
+}
+.hs-tile-borders {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+.hs-tile-mana {
+	background-image: url(/img/tile_mana.png);
+	background-size: 100% 100%;
+	position: absolute;
+	left: -5px;
+	width: 43px;
+	height: 39px;
+}
+.hs-tile-info {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.hs-tile-info > span {
+	position: absolute;
+}
+.hs-tile-info-left, .hs-tile-info-right {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	font-size: 1.4em;
+}
+.hs-tile-info-left {
+	width: 34px;
+}
+.hs-tile-info-middle {
+	left: 39px;
+	bottom: 6.5px;
+	font-size: 1.2em;
+}
+.hs-tile-info-middle span {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: block;
+}
+.hs-tile-info-right {
+	right: 5px;
+	width: 30px;
+}
+.deck-entry:hover .preview-card img {
+	display: block;
+}
+.preview-card {
+	pointer-events: none;
+	z-index: 400;
+	left: -100%;
+	position: absolute;
+}
+.preview-card img {
+	display: none;
+	width: 250px;
+	transform: translateY(-50%);
+}
+
+.deck-entry-with-amount .hs-tile-img {
+	right: 139px;
+}
+.deck-entry-with-amount .hs-tile-shade {
+	left: 22px;
+}
+.deck-entry-with-amount .hs-tile-borders {
+	background-image: url(/img/tile_container_number.png);
+}
+.deck-entry-with-amount .hs-tile-info-middle {
+	max-width: 170px;
+}
+.deck-entry-with-amount .hs-tile-info-middle span {
+	width: 170px;
+}
+
+.deck-entry-without-amount .hs-tile-img {
+	right: 124px;
+}
+.deck-entry-without-amount .hs-tile-shade {
+	left: 30px;
+}
+.deck-entry-without-amount .hs-tile-borders {
+	background-image: url(/img/tile_container_open.png);
+}
+.deck-entry-without-amount .hs-tile-info-middle {
+	max-width: 190px;
+}
+.deck-entry-without-amount .hs-tile-info-middle span {
+	width: 190px;
+}
+
+@media (max-width: 800px) {
+	.hs-decklist {
+		grid-template-columns: 1fr;
+	}
+}
+@media (max-width: 500px) {
+	.hs-arcane-dust, .preview-card {
+		visibility: hidden;
+	}
+}
+.deckCode {
+    width: 100%;
+    font-size: 12px;
+    color: #fff;
+    margin-top: .2rem;
+}
+.deckCode .code {
+    display: inline-block;
+    vertical-align: top;
+    padding-left: .1rem;
+    width: 64%;
+    height: .5rem;
+    line-height: .5rem;
+    border: 1px solid #33589b;
+    border-right: none;
+    border-radius: 3px 0 0 3px;
+    font-size: 12px;
+    background: rgba(0,0,0,0.55);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #D8D8D8;
+}
+.deckCode .copy {
+    display: inline-block;
+    vertical-align: top;
+    width: 34%;
+    height: .5rem;
+    background: #3b68b8;
+    border: 1px solid #33589b;
+    border-left: none;
+    border-radius: 0 3px 3px 0;
+    text-align: center;
+    line-height: .5rem;
+}
