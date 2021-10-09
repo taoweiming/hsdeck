@@ -68,7 +68,7 @@ app.get("/", (req, res) => {
  * [description] - 跟路由
  */
 // 当一个get请求 http://localhost:8080/getHotNews时，就会后面的async函数
-app.get('/getHotNews', async (req, res, next) => {
+app.get('/getHotNews', async (req, res) => {
 	res.send(hotNews);
 });
 
@@ -121,7 +121,7 @@ let getHotNews = (res) => {
 	return hotNews
 };
 import yasuo from './test.js';
-app.get('/getCardList', (req, res, next) => {
+app.get('/getCardList', (req, res) => {
 	const deckId = req.query.deckId || "IWlkkMkpXmr57U7v4Nsrqc";
 	//拼接数组
 	let base64 = yasuo(deckId).then(function (data) {
@@ -141,4 +141,5 @@ app.get('/getCardList', (req, res, next) => {
 			}, result));
 		}
 	});
+	console.log("base64:" + base64);
 });

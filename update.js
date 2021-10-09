@@ -7,7 +7,7 @@ import path from "path";
 
 function request(url) {
     https.get(url, res => {
-        if (res.statusCode == 302) {
+        if (res.statusCode === 302) {
             request(res.headers.location);
             return;
         }

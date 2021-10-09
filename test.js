@@ -55,14 +55,14 @@ let getCardInfo = (res) => {
     let cards = [];
     // 访问成功，请求http://news.baidu.com/页面所返回的数据会包含在res.text中。
 
-    /* 使用cheerio模块的cherrio.load()方法，将HTMLdocument作为参数传入函数
-       以后就可以使用类似jQuery的$(selectior)的方式来获取页面元素
+    /* 使用cheerio模块的cheerio.load()方法，将HTMLDocument作为参数传入函数
+       以后就可以使用类似jQuery的$(selector)的方式来获取页面元素
      */
     let $ = cheerio.load(res.text);
 
     // 找到目标数据所在的页面元素，获取数据
     $('div#deck-info').each((idx, ele) => {
-        // cherrio中$('selector').each()用来遍历所有匹配到的DOM元素
+        // cheerio中$('selector').each()用来遍历所有匹配到的DOM元素
         // 参数idx是当前遍历的元素的索引，ele就是当前便利的DOM元素
         let card = {
             cards: $(ele).attr("data-deck-cards"),        // 牌
@@ -142,7 +142,8 @@ function parseXInt(c,x) {
         // console.log(int);
         array.push(int);
     }
-    return array;
+    //转置
+    return array.reverse();
 }
 
 function to_hex(data) {
@@ -160,16 +161,12 @@ function parse_varint(data, cards) {
     }else if (c >= 128 && c < 16384) {//二位
         //转成2个字节 补零
         let result = parseXInt(c, 2);
-        //转置
-        result.reverse();
         for (const num of result) {
             cards.push(to_hex(num));
         }
     }else if (c >= 16384) {//三位
         //转成3个字节 补零
         let result = parseXInt(c, 3);
-        //转置
-        result.reverse();
         for (const num of result) {
             cards.push(to_hex(num));
         }
