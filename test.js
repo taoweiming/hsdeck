@@ -43,7 +43,7 @@ let synchronous_get = function (url) {
                 const result = Buffer.from(cards.join(""), "hex").toString("base64");
                 console.log(result);
                 resolve({
-                    base64: res,
+                    base64: result,
                     name: cardInfo[0].name
 				});
             }

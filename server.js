@@ -126,7 +126,6 @@ app.get('/getCardList', (req, res) => {
 	//拼接数组
 	let base64 = yasuo(deckId).then(function (data) {
 		console.log("### "+data.name+"\n"+data.base64);
-		// res.send(data);
 		const code = data.base64,
 			name = req.query.name || data.name,
 			lang = req.query.lang || "zhCN",
@@ -141,5 +140,5 @@ app.get('/getCardList', (req, res) => {
 			}, result));
 		}
 	});
-	console.log("base64:" + base64);
+	// console.log("base64:" + base64);
 });
