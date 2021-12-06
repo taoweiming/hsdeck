@@ -120,7 +120,7 @@ let getHotNews = (res) => {
 	});
 	return hotNews
 };
-import yasuo from './test.js';
+import yasuo from './yasuo.js';
 app.get('/getCardList', (req, res) => {
 	const deckId = req.query.deckId || "IWlkkMkpXmr57U7v4Nsrqc";
 	//拼接数组
