@@ -7,7 +7,7 @@ let synchronous_get = function (url) {
             .set({ 
 				'User-Agent': "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:96.0) Gecko/20100101 Firefox/96.0" ,
 				'accept-language': "zh-CN,zh;q=0.9,en;q=0.8" ,
-                'Cookie': "cf_chl_2=e67fb1a6337c064; cf_chl_prog=x11; cf_clearance=VexiwgZAnyJqwX6WvRaVcIbC0NPSSu_z.GtUJ.Q0U9A-1643256177-0-250; _ga=GA1.2.815142619.1643256194; _gid=GA1.2.871043423.1643256194; __qca=P0-775193929-1643256403344"
+                'Cookie': "cf_clearance=SxMT1hCSaZCjX9dPqngiYjxp_LiMbxoI5sGtcEmm4OI-1643269083-0-250; _ga=GA1.2.815142619.1643256194; _gid=GA1.2.871043423.1643256194; __qca=P0-775193929-1643256403344; cf_chl_2=c58c53d27c42132; cf_chl_prog=x11; _gat=1; __gads=ID=44d222a3ec2b69b4-22336aa244d00096:T=1643269256:S=ALNI_MbxwEkgzUZac8iaGS2pNXzSBh2QpQ"
 				})
             .end((error, res) => {
             if (error) {
