@@ -80,7 +80,7 @@ export default function yasuo(deckId) {
     return synchronous_get('https://hsreplay.net/decks/' + deckId + '/#vodId=ui528KEamuT3SGiRqYmVnn');
 }
 
-yasuo("IWlkkMkpXmr57U7v4Nsrqc");
+// yasuo("IWlkkMkpXmr57U7v4Nsrqc");
 
 // async function doRequest(){
 //     request.get('https://hsreplay.net/analytics/query/single_deck_mulligan_guide_v2/?TimeRange=CURRENT_PATCH&GameType=RANKED_STANDARD&LeagueRankRange=BRONZE_THROUGH_GOLD&Region=ALL&PlayerInitiative=ALL&deck_id=IWlkkMkpXmr57U7v4Nsrqc')

@@ -2,7 +2,7 @@
 
 利用 Node.js 实现的炉石传说卡组解析应用。  
 具体实现可参见博文：https://zhangshuqiao.org/2018-12/炉石卡组代码解析/
-通过炉石套牌网站快速粘贴至游戏内见博文：
+生成Base64参见博文：http://spartz.xyz/炉石套牌base64生成/
 
 ## 使用方法
 
@@ -46,7 +46,9 @@ https://api.hearthstonejson.com/v1/35057/all/cards.collectible.json
 
 ## 鸣谢
 
-本项目受到了 [mashirozx/Awesome-Deck](https://github.com/mashirozx/Awesome-Deck) 的启发。
+本项目受到了 [mashirozx/Awesome-Deck](https://github.com/mashirozx/Awesome-Deck) 
+[stevenjoezhang/hearthstone-deck](https://github.com/stevenjoezhang/hearthstone-deck)
+的启发。
 
 ## TODO
 
