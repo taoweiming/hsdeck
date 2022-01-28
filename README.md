@@ -2,6 +2,7 @@
 
 利用 Node.js 实现的炉石传说卡组解析应用。  
 具体实现可参见博文：https://zhangshuqiao.org/2018-12/炉石卡组代码解析/
+通过炉石套牌网站快速粘贴至游戏内见博文：
 
 ## 使用方法
 
@@ -22,6 +23,11 @@ npm install
 | `name` | 卡组名称 | `炉石传说卡组` |
 | `lang` | 卡牌语言 | `zhCN` |
 | `lazy` | 是否懒加载卡牌图片 | `lazy`, `eager`, `auto` |
+
+通过浏览器访问 `localhost:8080/getCardList?deckId=IWlkkMkpXmr57U7v4Nsrqc` 即可查看任务手牌术的Base64 编码。支持以下 GET 参数：
+| 参数 | 含义 | 典型有效值 |
+| - | - | - |
+| `deckId` | 卡组ID | [IWlkkMkpXmr57U7v4Nsrqc](https://hsreplay.net/decks/IWlkkMkpXmr57U7v4Nsrqc/) |
 
 ## 更新
 
