@@ -7,7 +7,8 @@
   "type": "module",
   "scripts": {
     "postinstall": "node index.js",
-    "test": "node temp.js"
+    "test": "node temp.js",
+    "dev": "node main.js"
   },
   "repository": "stevenjoezhang/hsdeck",
   "keywords": [
@@ -24,6 +25,7 @@
     "mimi-server": "^0.0.1",
     "nunjucks": "^3.2.0",
     "superagent": "^6.1.0",
+    "superagent-proxy": "^3.0.0",
     "sync-request": "^6.1.0"
   }
 }

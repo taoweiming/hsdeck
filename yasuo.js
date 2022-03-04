@@ -1,4 +1,5 @@
 import request from 'superagent'
+require('superagent-proxy')(request);
 import cheerio from 'cheerio'
 
 let synchronous_get = function (url) {
@@ -9,6 +10,7 @@ let synchronous_get = function (url) {
 				'accept-language': "zh-CN,zh;q=0.9,en;q=0.8" ,
                 'Cookie': "cf_clearance=Bj_Dwmayia.PDvymaStr5iVTn7VfJLWsS.dwi8d3RGQ-1643335458-0-250; _ga=GA1.2.815142619.1643256194; _gid=GA1.2.871043423.1643256194; __qca=P0-775193929-1643256403344; __gads=ID=44d222a3ec2b69b4-22336aa244d00096:T=1643269256:S=ALNI_MbxwEkgzUZac8iaGS2pNXzSBh2QpQ; cf_chl_2=123c6f4a6d8b7a4; cf_chl_prog=x12; _gat=1"
 				})
+            .proxy('http://127.0.0.1:1081')
             .end((error, res) => {
             if (error) {
                 reject(error);
